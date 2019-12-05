@@ -81,18 +81,31 @@
         margin-top: 20px
         ul 
             margin-left: 80px
-            list-style-image: url(../icons/ul.png) 
+            // list-style-image: url(../icons/ul.png)
             li 
+                position: relative
                 padding-bottom: 20px
-                &:first-of-type
-                    font-weight: 700
+                list-style-type: none
+                font-weight: 700
+                &::before
+                    content: ''
+                    position: absolute
+                    background-image: url(../icons/ul.png)
+                    width: 50px
+                    height: 50px
+                    left: -50px
+                    top: 20%
+                    transform: translateY(-50%)
+
+                &:first-of-type                   
                     font-size: 20px
                 &:nth-of-type(2)
-                    font-weight: 700
                     font-size: 18px
                 &:nth-of-type(3)
-                    font-weight: 700
                     font-size: 17px
+                &:nth-of-type(5)
+                    font-size: 15px
+                    
                 &:last-of-type
                     font-size: 13px
 
